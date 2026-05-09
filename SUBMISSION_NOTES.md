@@ -1,6 +1,6 @@
 # Submission Notes
 
-Live demo: https://usevajra.xyz (fallback: https://vajra-1m2.pages.dev)
+Live demo: https://usevajra.xyz
 GitHub: https://github.com/Vinaystwt/vajra
 
 One-liner:

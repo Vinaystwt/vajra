@@ -191,8 +191,8 @@ Reset increments `policy_id`, creates a new PolicyPDA and vault, and leaves old 
 
 Hosted on Cloudflare Pages.
 
-Production URL: https://vajra-1m2.pages.dev
-Custom domain: https://usevajra.xyz (DNS setup required — see below)
+Production URL: https://usevajra.xyz
+Cloudflare Pages fallback: https://vajra-1m2.pages.dev
 Cloudflare project: vajra
 Build command: `cd app && npm run build`
 Build output: `app/dist`
