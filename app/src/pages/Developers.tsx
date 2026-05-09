@@ -362,7 +362,7 @@ export function Developers() {
             transition={{ delay: 0.1 }}
             className="text-[rgba(237,237,237,0.55)] leading-relaxed"
           >
-            SDK, MCP server, x402-style reference integration, Policy Builder, and ready-to-use templates.
+            TypeScript SDK, MCP server, Policy Builder, receipt verifier, and mandate templates for the Vajra spend firewall.
           </motion.p>
 
           {/* package status pill */}

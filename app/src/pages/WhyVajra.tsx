@@ -384,6 +384,51 @@ export function WhyVajra() {
         </div>
       </section>
 
+      {/* ─── Roadmap ─────────────────────────────────────────────────────── */}
+      <section className="py-14 border-t border-[rgba(255,255,255,0.05)]">
+        <FadeIn className="mb-8">
+          <div>
+            <span className="text-[10px] font-mono uppercase tracking-widest text-[rgba(237,237,237,0.3)]">Roadmap</span>
+            <h2 className="text-xl font-semibold text-[rgba(237,237,237,0.9)] mt-2">From devnet proof to mainnet infrastructure.</h2>
+          </div>
+        </FadeIn>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {[
+            {
+              label: "Near-term",
+              items: ["Mainnet beta", "Production SPL stablecoin support", "External security review", "Design partner pilots"],
+            },
+            {
+              label: "Security / mainnet readiness",
+              items: ["External program audit", "Locked upgrade authority", "Incident monitoring", "Formal guard verification"],
+            },
+            {
+              label: "Integrations",
+              items: ["Agent platform adapters", "DeFi protocol composability", "x402-style production validation", "Hosted verifier API"],
+            },
+          ].map((group, i) => (
+            <motion.div
+              key={group.label}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.35, delay: i * 0.07 }}
+              className="panel p-5 flex flex-col gap-3"
+            >
+              <span className="text-[10px] font-mono uppercase tracking-widest text-cyan/60">{group.label}</span>
+              <ul className="flex flex-col gap-1.5">
+                {group.items.map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm text-[rgba(237,237,237,0.5)]">
+                    <span className="text-[rgba(237,237,237,0.2)] mt-0.5">·</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       {/* ─── CTAs ────────────────────────────────────────────────────────── */}
       <section className="py-16 border-t border-[rgba(255,255,255,0.05)]">
         <FadeIn>

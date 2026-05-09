@@ -273,6 +273,37 @@ vajra/
 
 ---
 
+## Roadmap
+
+Vajra is a devnet proof-of-concept targeting mainnet readiness.
+
+**Near-term**
+- Mainnet beta with production SPL stablecoin mint support (USDC/USDT)
+- External security review and audit
+- Locked or governed upgrade authority before mainnet
+- Production merchant verifier (hosted API + SDK)
+- SDK adapters for DeFi bot and agent platform integrations
+- Design partner pilots with DeFi bot operators and autonomous agent frameworks
+
+**Security / mainnet readiness**
+- External program audit — not completed yet; devnet program is upgradeable during hackathon iteration
+- Locked or governance-controlled upgrade authority on mainnet
+- Incident monitoring and response playbooks
+- Formal verification of core guard logic
+
+**Integrations**
+- Wallet and agent platform integrations
+- x402/payments ecosystem compatibility — validated reference integration first, production integration when protocol is stable
+- DeFi protocol composability (CPI composable design already in place)
+
+**Business**
+- Protocol fee on guarded transfers (optional, owner-configurable)
+- Vault creation fee
+- Hosted verifier and receipt API
+- Enterprise integration support
+
+---
+
 ## Links
 
 | | |

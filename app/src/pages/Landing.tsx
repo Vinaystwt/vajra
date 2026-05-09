@@ -140,8 +140,11 @@ export function Landing() {
               transition={{ duration: 0.5, delay: 0.15 }}
               className="text-lg text-[rgba(237,237,237,0.58)] leading-relaxed max-w-xl mb-10"
             >
-              Vajra is a non-custodial allowance vault for Solana automated signers. The agent
-              requests, the program enforces, and the agent key never holds vault authority.
+              A compromised agent key should not drain your treasury.{" "}
+              <span className="text-[rgba(237,237,237,0.8)]">
+                Vajra changes the authority model: the PolicyPDA owns the SPL vault, the agent
+                only requests, and the program enforces policy before tokens move.
+              </span>
             </motion.p>
 
             {/* CTAs */}
@@ -289,7 +292,7 @@ export function Landing() {
               <MetricCard
                 label="Blocked attempts"
                 value={<AnimatedCount target={summary.blockedCount || 6} />}
-                sub="Cached devnet proofs"
+                sub="Devnet proof artifacts"
                 accent="crimson"
                 icon={<Shield size={14} />}
               />
@@ -324,8 +327,8 @@ export function Landing() {
         <div className="max-w-7xl mx-auto">
           <FadeIn className="mb-6">
             <SectionHeader
-              eyebrow="Allowance Vault War Room"
-              title="War Room · Allowance Vault Simulator"
+              eyebrow="Interactive Replay"
+              title="See both outcomes side by side."
               sub="Toggle compromised mode. Launch an attack. The vault balance stays unchanged. The program rejected the transfer."
             />
           </FadeIn>
@@ -483,7 +486,7 @@ export function Landing() {
             <FadeIn delay={0.1}>
               <div className="flex flex-col gap-6">
                 <SectionHeader
-                  eyebrow="SDK · MCP · x402-style"
+                  eyebrow="Integration surfaces"
                   title="Integrate in minutes"
                 />
                 <div className="rounded-xl border border-[rgba(255,255,255,0.08)] overflow-hidden">

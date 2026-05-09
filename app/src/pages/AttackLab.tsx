@@ -509,7 +509,7 @@ export function AttackLab() {
             <span className="text-crimson">Raw key drains.</span>
           </h1>
           <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            <span className="text-cyan">Vajra survives.</span>
+            <span className="text-cyan">Vajra blocks.</span>
           </h1>
         </div>
 
@@ -572,8 +572,22 @@ export function AttackLab() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 8 }}
             transition={{ duration: reduced ? 0 : 0.5 }}
+            className="flex flex-col gap-4"
           >
             <ComparisonCard proofData={proofData} />
+
+            {/* Why it works */}
+            <div className="rounded-xl border border-cyan/15 bg-cyan/5 px-5 py-4 flex flex-col gap-1.5">
+              <span className="text-[10px] font-mono uppercase tracking-widest text-cyan/70">Why it works</span>
+              <p className="text-sm text-[rgba(237,237,237,0.75)] leading-relaxed">
+                The SPL vault authority is the{" "}
+                <span className="text-cyan font-mono">PolicyPDA</span>, not the agent key.
+                The agent key signs the <span className="font-mono text-[rgba(237,237,237,0.9)]">executeGuardedTransfer</span> instruction,
+                but the Vajra program holds vault authority and only issues the CPI transfer
+                if every policy check passes. A compromised agent key cannot bypass this —
+                it can only submit requests that the program will reject.
+              </p>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
