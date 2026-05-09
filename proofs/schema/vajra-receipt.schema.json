@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vajra.dev/schemas/vajra-receipt.schema.json",
+  "title": "Vajra Execution Receipt",
+  "type": "object",
+  "required": [
+    "receipt_version",
+    "receipt_id",
+    "created_at",
+    "network",
+    "program_id",
+    "signature",
+    "attempt_type",
+    "status",
+    "requested_amount",
+    "actual_inner_transfer_amount",
+    "vault_balance_before",
+    "vault_balance_after",
+    "vault_delta",
+    "inner_token_transfers",
+    "rule_triggered",
+    "guard_error",
+    "logs",
+    "raw_transaction_summary",
+    "receipt_hash",
+    "verifier"
+  ],
+  "properties": {
+    "receipt_version": { "const": "1.0" },
+    "receipt_id": { "type": "string" },
+    "created_at": { "type": "string" },
+    "network": {
+      "enum": ["devnet", "localnet", "testnet", "mainnet-beta", "fixture"]
+    },
+    "program_id": { "type": "string" },
+    "signature": { "type": "string" },
+    "explorer_url": { "type": "string" },
+    "policy": { "type": "string" },
+    "policy_id": { "type": "string" },
+    "agent": { "type": "string" },
+    "owner": { "type": "string" },
+    "vault": { "type": "string" },
+    "mint": { "type": "string" },
+    "source": { "type": "string" },
+    "destination": { "type": "string" },
+    "destination_label": { "type": "string" },
+    "attempt_type": {
+      "enum": [
+        "allowed_spend",
+        "blocked_spend",
+        "raw_wallet_drain",
+        "verification_only"
+      ]
+    },
+    "status": {
+      "enum": [
+        "allowed",
+        "blocked",
+        "failed",
+        "raw_wallet_drained",
+        "not_vajra",
+        "unknown"
+      ]
+    },
+    "requested_amount": { "type": "string" },
+    "actual_inner_transfer_amount": { "type": "string" },
+    "vault_balance_before": { "type": "string" },
+    "vault_balance_after": { "type": "string" },
+    "vault_delta": { "type": "string" },
+    "inner_token_transfers": { "type": "integer", "minimum": 0 },
+    "rule_triggered": { "type": "string" },
+    "guard_error": { "type": "string" },
+    "logs": { "type": "array", "items": { "type": "string" } },
+    "raw_transaction_summary": { "type": "object" },
+    "receipt_hash": { "type": "string" },
+    "verifier": {
+      "type": "object",
+      "required": ["verified", "method", "checked_at"],
+      "properties": {
+        "verified": { "type": "boolean" },
+        "method": { "type": "string" },
+        "checked_at": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "cluster": "devnet",
+  "mint": "DemoUSD mint public key",
+  "owner": "owner public key",
+  "agent": "delegated signer public key",
+  "merchant_a": "allowed merchant owner public key",
+  "merchant_b": "blocked merchant owner public key",
+  "owner_ata": "owner DemoUSD token account",
+  "merchant_a_ata": "allowed destination token account",
+  "merchant_b_ata": "blocked destination token account",
+  "policy_id": "1",
+  "policy": "PolicyPDA public key",
+  "vault_ata": "PolicyPDA-owned vault token account",
+  "dest_rule_a": "DestinationRulePDA for merchant_a",
+  "expiry_slot": "future slot",
+  "period_budget": "25000000",
+  "period_duration_slots": "10000",
+  "min_slot_interval": "5"
+}

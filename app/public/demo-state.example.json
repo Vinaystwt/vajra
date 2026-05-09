@@ -1,0 +1,21 @@
+{
+  "cluster": "local-dry-run",
+  "programId": "APn6AN7FphYAjUEJWhvGZa1T5nfQDNmCcFW2244p4UoD",
+  "policy": "DemoPolicyPDA111111111111111111111111111111",
+  "vault": "DemoVaultATA1111111111111111111111111111111",
+  "mint": "DemoUSD111111111111111111111111111111111111",
+  "agent": "DemoAgent1111111111111111111111111111111111",
+  "owner": "DemoOwner1111111111111111111111111111111111",
+  "allowedDestination": "MerchantAAllowedTokenAccount111111111111111",
+  "blockedDestination": "MerchantBBlockedTokenAccount111111111111111",
+  "policyFields": {
+    "totalBudget": "100000000",
+    "spentAmount": "7000000",
+    "perTxCap": "10000000",
+    "periodBudget": "25000000",
+    "periodSpent": "7000000",
+    "periodDurationSlots": "10000",
+    "minSlotInterval": "5",
+    "revoked": false
+  }
+}

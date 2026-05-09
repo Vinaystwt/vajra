@@ -1,0 +1,17 @@
+[
+  {
+    "id": "api-buyer",
+    "title": "API-buying agent",
+    "summary": "Pays protected APIs through policy vaults without raw wallet access."
+  },
+  {
+    "id": "ops-bot",
+    "title": "Operations bot",
+    "summary": "Runs recurring payments within destination, budget, period, and velocity limits."
+  },
+  {
+    "id": "treasury-automation",
+    "title": "Treasury automation",
+    "summary": "Allows autonomous execution while keeping the program as the spend boundary."
+  }
+]

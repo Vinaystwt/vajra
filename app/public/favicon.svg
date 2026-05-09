@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Shield body -->
+  <path d="M16 2L4 7v9c0 6.627 5.144 12.053 12 13 6.856-.947 12-6.373 12-13V7L16 2z"
+    fill="#0a0a0a" stroke="#00E5FF" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Inner shield ring (policy gate visual) -->
+  <path d="M16 5.5L6.5 9.5v6.5c0 4.694 3.588 8.567 9.5 9.5 5.912-.933 9.5-4.806 9.5-9.5V9.5L16 5.5z"
+    fill="none" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.3" stroke-linejoin="round"/>
+  <!-- Vajra bolt — left arm -->
+  <path d="M16 8.5l-3.5 5.5h3L13.5 21l7-8.5h-3.5L20 8.5H16z"
+    fill="#00E5FF" opacity="0.9"/>
+  <!-- Center policy dot -->
+  <circle cx="16" cy="14.75" r="1" fill="#0a0a0a"/>
+</svg>

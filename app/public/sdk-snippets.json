@@ -1,0 +1,6 @@
+{
+  "createPolicy": "await vajra.createPolicy({ policyId, delegatedSigner, allowedMint, totalBudget, perTxCap, expirySlot, periodBudget, periodDurationSlots, minSlotInterval });",
+  "simulateSpend": "await vajra.simulateSpend({ policy, mint, destinationTokenAccount, amount });",
+  "executeSpend": "await agentClient.spend({ policy, mint, destinationTokenAccount, amount });",
+  "exportProof": "const auditTrail = await vajra.getAuditTrail(policy);"
+}

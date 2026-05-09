@@ -1,0 +1,121 @@
+{
+  "network": "devnet",
+  "source": "fresh-devnet",
+  "proof_type": "devnet-red-team",
+  "program_id": "APn6AN7FphYAjUEJWhvGZa1T5nfQDNmCcFW2244p4UoD",
+  "comparison": {
+    "generated_at": "2026-05-09T03:17:24.998Z",
+    "network": "devnet",
+    "source": "fresh-devnet",
+    "proof_type": "devnet-red-team",
+    "program_id": "APn6AN7FphYAjUEJWhvGZa1T5nfQDNmCcFW2244p4UoD",
+    "policy": "vCeG5UbD8BwpgDCtEetj5dp2haR1Vd6cDPFBhCvQ8yp",
+    "policy_id": "1778296629815",
+    "mint": "4eC4i6pmM9G6R2qSGCaNcot6KTv6xx1FcAn5GE7Px7qK",
+    "thesis": "Raw key drains. Vajra survives. Anyone can verify it.",
+    "setup": {
+      "create_policy_signature": "74w6kyDa7kEtL9enPnuJxh4uEXxQQfY1x8uBwmMUxgcwuhWzFKbXvom86ZaK6y8vdo6mnqPeP9bgNZ9WH6MhDF5",
+      "fund_vault_signature": "2mD9BZwvooeybUqcPk77zZD8PzKHAF4GytSv7s5e2QTsbMkEt8FZTjZYPdaaMKvC6wCaV8SLnpuz9G1YHtxTR3hm",
+      "add_destination_signature": "2Gsbb536Dv8TyaXpGB8L4uJiJEfkKMfTJJr7NC88ycKrQeU2MmV9nLqwGziixo9GCn2jvCEzukQiLkCXTpzt7gJq"
+    },
+    "raw_wallet": {
+      "status": "drained",
+      "loss_amount": "50000000",
+      "signature": "wTo4fANWAG6P3azWJ4W3MQVYn5rYpZp6s3ZijsKsN4xGP2ACCGieZgtYKXZ6wiFNW3WTek9Paeco9bozGye95p3",
+      "explorer_url": "https://explorer.solana.com/tx/wTo4fANWAG6P3azWJ4W3MQVYn5rYpZp6s3ZijsKsN4xGP2ACCGieZgtYKXZ6wiFNW3WTek9Paeco9bozGye95p3?cluster=devnet",
+      "verifier_classification": "not_vajra"
+    },
+    "vajra_allowance_vault": {
+      "status": "blocked",
+      "loss_amount": "0",
+      "avoided_loss": "50000000",
+      "signature": "5yWAEdtjihJjGWk9phXLvAG831r9yqvT7qrPgbmaFXoS5whsFSLLuuLLFGnUmKpAE22RWvFxPk3NDn1oCqfEqEf8",
+      "explorer_url": "https://explorer.solana.com/tx/5yWAEdtjihJjGWk9phXLvAG831r9yqvT7qrPgbmaFXoS5whsFSLLuuLLFGnUmKpAE22RWvFxPk3NDn1oCqfEqEf8?cluster=devnet",
+      "rule_triggered": "perTxCap",
+      "inner_token_transfers": 0,
+      "vault_delta": "0",
+      "verifier_classification": "vajra_blocked"
+    },
+    "allowed_payment": {
+      "signature": "382Mj4AgfWcMcmzaMZebrbmbBBGTDezghXWssJnFBy6y33ZkpT48uFHs7toerSFmPmGuAVtefM1CWvG2miDYXvAo",
+      "explorer_url": "https://explorer.solana.com/tx/382Mj4AgfWcMcmzaMZebrbmbBBGTDezghXWssJnFBy6y33ZkpT48uFHs7toerSFmPmGuAVtefM1CWvG2miDYXvAo?cluster=devnet",
+      "verifier_classification": "vajra_allowed"
+    },
+    "receipts": [
+      {
+        "receipt_id": "devnet:382Mj4AgfWcMcmzaMZebrbmbBBGTDezghXWssJnFBy6y33ZkpT48uFHs7toerSFmPmGuAVtefM1CWvG2miDYXvAo",
+        "network": "devnet",
+        "signature": "382Mj4AgfWcMcmzaMZebrbmbBBGTDezghXWssJnFBy6y33ZkpT48uFHs7toerSFmPmGuAVtefM1CWvG2miDYXvAo",
+        "explorer_url": "https://explorer.solana.com/tx/382Mj4AgfWcMcmzaMZebrbmbBBGTDezghXWssJnFBy6y33ZkpT48uFHs7toerSFmPmGuAVtefM1CWvG2miDYXvAo?cluster=devnet",
+        "attempt_type": "allowed_spend",
+        "status": "allowed",
+        "rule_triggered": "all_clear",
+        "requested_amount": "5000000",
+        "actual_inner_transfer_amount": "5000000",
+        "vault_balance_before": "50000000",
+        "vault_balance_after": "45000000",
+        "vault_delta": "-5000000",
+        "inner_token_transfers": 1,
+        "receipt_hash": "ad7498dee090fde52fa70502f0650672844558feaa51f03de35b152f821eafc1"
+      },
+      {
+        "receipt_id": "devnet:wTo4fANWAG6P3azWJ4W3MQVYn5rYpZp6s3ZijsKsN4xGP2ACCGieZgtYKXZ6wiFNW3WTek9Paeco9bozGye95p3",
+        "network": "devnet",
+        "signature": "wTo4fANWAG6P3azWJ4W3MQVYn5rYpZp6s3ZijsKsN4xGP2ACCGieZgtYKXZ6wiFNW3WTek9Paeco9bozGye95p3",
+        "explorer_url": "https://explorer.solana.com/tx/wTo4fANWAG6P3azWJ4W3MQVYn5rYpZp6s3ZijsKsN4xGP2ACCGieZgtYKXZ6wiFNW3WTek9Paeco9bozGye95p3?cluster=devnet",
+        "attempt_type": "raw_wallet_drain",
+        "status": "raw_wallet_drained",
+        "rule_triggered": "rawWalletAuthority",
+        "requested_amount": "50000000",
+        "actual_inner_transfer_amount": "0",
+        "vault_balance_before": "50000000",
+        "vault_balance_after": "0",
+        "vault_delta": "-50000000",
+        "inner_token_transfers": 0,
+        "receipt_hash": "da0b2b97da21e3212b90cd1cf47e65c4875a9035447e056045e8d261fba9679b"
+      },
+      {
+        "receipt_id": "devnet:5yWAEdtjihJjGWk9phXLvAG831r9yqvT7qrPgbmaFXoS5whsFSLLuuLLFGnUmKpAE22RWvFxPk3NDn1oCqfEqEf8",
+        "network": "devnet",
+        "signature": "5yWAEdtjihJjGWk9phXLvAG831r9yqvT7qrPgbmaFXoS5whsFSLLuuLLFGnUmKpAE22RWvFxPk3NDn1oCqfEqEf8",
+        "explorer_url": "https://explorer.solana.com/tx/5yWAEdtjihJjGWk9phXLvAG831r9yqvT7qrPgbmaFXoS5whsFSLLuuLLFGnUmKpAE22RWvFxPk3NDn1oCqfEqEf8?cluster=devnet",
+        "attempt_type": "blocked_spend",
+        "status": "blocked",
+        "rule_triggered": "perTxCap",
+        "requested_amount": "50000000",
+        "actual_inner_transfer_amount": "0",
+        "vault_balance_before": "45000000",
+        "vault_balance_after": "45000000",
+        "vault_delta": "0",
+        "inner_token_transfers": 0,
+        "receipt_hash": "86061c55fd156b30bb9f7dcb54f5803e4633a16ae4c025145fe03e6e80cfb8ec"
+      }
+    ]
+  },
+  "verifier": {
+    "allowed": {
+      "verified": true,
+      "classification": "vajra_allowed",
+      "errors": []
+    },
+    "raw_wallet": {
+      "verified": true,
+      "classification": "not_vajra",
+      "errors": []
+    },
+    "blocked": {
+      "verified": true,
+      "classification": "vajra_blocked",
+      "errors": [],
+      "vault_delta": "0",
+      "inner_token_transfers": 0
+    },
+    "expected_destination_mismatch": {
+      "verified": false,
+      "classification": "vajra_allowed",
+      "errors": [
+        "Expected destination BYZ9wZ7pt92bhwqfZ4umiA5TkEGy2FAcmB8QfmRXXMC9, got ETdQsQEH4MsJWfku4s7QjWbpQW31SzRqWVFwDwoK9X3G."
+      ]
+    }
+  }
+}

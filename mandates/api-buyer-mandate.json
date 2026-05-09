@@ -1,0 +1,24 @@
+{
+  "id": "api-buyer",
+  "name": "API Buyer Mandate",
+  "target_user": "Agents buying protected API or data access.",
+  "use_case": "Small repeated payments to a fixed API merchant token account.",
+  "risk_model": "Low per-call cap, short period budget, and destination allowlist stop overpayment or destination swapping.",
+  "recommended_total_budget": "50000000",
+  "recommended_per_tx_cap": "2000000",
+  "recommended_period_budget": "10000000",
+  "recommended_velocity_limit": "5 slots",
+  "recommended_expiry": "24 hours",
+  "allowed_destination_model": "One merchant token account per protected API.",
+  "revoke_behavior": "Owner revokes when API key, merchant, or campaign changes.",
+  "verifier_notes": "API checks receipt status allowed and expected destination before returning protected payload.",
+  "sdk_snippet": "const mandate = getMandate('api-buyer');",
+  "demo_receipt_reference": "examples/x402-vajra/proofs/x402-vajra-proof.json",
+  "policy_config": {
+    "totalBudget": "50000000",
+    "perTxCap": "2000000",
+    "periodBudget": "10000000",
+    "periodDurationSlots": "7200",
+    "minSlotInterval": "5"
+  }
+}

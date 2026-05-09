@@ -1,0 +1,29 @@
+[
+  {
+    "id": "x402ApiBuyer",
+    "name": "x402 API Buyer",
+    "totalBudget": "100000000",
+    "perTxCap": "5000000",
+    "periodBudget": "25000000",
+    "periodDurationSlots": "7200",
+    "minSlotInterval": "2"
+  },
+  {
+    "id": "daoOpsBot",
+    "name": "DAO Ops Bot",
+    "totalBudget": "1000000000",
+    "perTxCap": "25000000",
+    "periodBudget": "100000000",
+    "periodDurationSlots": "216000",
+    "minSlotInterval": "20"
+  },
+  {
+    "id": "marketMaker",
+    "name": "Market Maker",
+    "totalBudget": "5000000000",
+    "perTxCap": "100000000",
+    "periodBudget": "1000000000",
+    "periodDurationSlots": "7200",
+    "minSlotInterval": "1"
+  }
+]

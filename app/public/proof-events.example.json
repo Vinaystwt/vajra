@@ -1,0 +1,22 @@
+[
+  {
+    "attemptType": "good-spend",
+    "amount": "5000000",
+    "result": "allowed",
+    "ruleTriggered": "all_clear",
+    "vaultBalanceBefore": "100000000",
+    "vaultBalanceAfter": "95000000",
+    "vaultDelta": "-5000000",
+    "avoidedLoss": "0"
+  },
+  {
+    "attemptType": "raw-drain",
+    "amount": "95000000",
+    "result": "blocked",
+    "ruleTriggered": "vaultAuthority",
+    "vaultBalanceBefore": "95000000",
+    "vaultBalanceAfter": "95000000",
+    "vaultDelta": "0",
+    "avoidedLoss": "95000000"
+  }
+]

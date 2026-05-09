@@ -1,0 +1,15 @@
+.anchor
+.DS_Store
+target
+node_modules
+**/node_modules
+dist
+**/dist
+build
+test-ledger
+target
+demo-keypairs
+demo-state.json
+app/screenshots
+app/qa-screenshots
+*.tgz

@@ -1,0 +1,44 @@
+{
+  "receipt_version": "1.0",
+  "receipt_id": "devnet:wTo4fANWAG6P3azWJ4W3MQVYn5rYpZp6s3ZijsKsN4xGP2ACCGieZgtYKXZ6wiFNW3WTek9Paeco9bozGye95p3",
+  "created_at": "2026-05-09T03:17:20.800Z",
+  "network": "devnet",
+  "program_id": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  "signature": "wTo4fANWAG6P3azWJ4W3MQVYn5rYpZp6s3ZijsKsN4xGP2ACCGieZgtYKXZ6wiFNW3WTek9Paeco9bozGye95p3",
+  "explorer_url": "https://explorer.solana.com/tx/wTo4fANWAG6P3azWJ4W3MQVYn5rYpZp6s3ZijsKsN4xGP2ACCGieZgtYKXZ6wiFNW3WTek9Paeco9bozGye95p3?cluster=devnet",
+  "policy": "",
+  "policy_id": "",
+  "agent": "GDVVFih63F37uqnRFeBgWtQPAgfrGD2Hi1V6eu7MhcTi",
+  "owner": "",
+  "vault": "",
+  "mint": "4eC4i6pmM9G6R2qSGCaNcot6KTv6xx1FcAn5GE7Px7qK",
+  "source": "CgYiE1RrRKgD4JbA8yDqfygJL6XWunMkimrvKAKCwkMU",
+  "destination": "BYZ9wZ7pt92bhwqfZ4umiA5TkEGy2FAcmB8QfmRXXMC9",
+  "destination_label": "Red-team attacker token account",
+  "attempt_type": "raw_wallet_drain",
+  "status": "raw_wallet_drained",
+  "requested_amount": "50000000",
+  "actual_inner_transfer_amount": "0",
+  "vault_balance_before": "50000000",
+  "vault_balance_after": "0",
+  "vault_delta": "-50000000",
+  "inner_token_transfers": 0,
+  "rule_triggered": "rawWalletAuthority",
+  "guard_error": "",
+  "logs": [
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 200000 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success"
+  ],
+  "raw_transaction_summary": {
+    "err": null,
+    "slot": 461078100,
+    "top_level_token_transfer_amount": "50000000"
+  },
+  "verifier": {
+    "verified": true,
+    "method": "rpc_non_vajra_classification_plus_measured_token_balance",
+    "checked_at": "2026-05-09T03:17:20.800Z"
+  },
+  "receipt_hash": "da0b2b97da21e3212b90cd1cf47e65c4875a9035447e056045e8d261fba9679b"
+}

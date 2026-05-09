@@ -1,0 +1,908 @@
+{
+  "address": "APn6AN7FphYAjUEJWhvGZa1T5nfQDNmCcFW2244p4UoD",
+  "metadata": {
+    "name": "vajra",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "add_destination",
+      "discriminator": [183, 152, 13, 93, 44, 178, 140, 243],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "policy"
+        },
+        {
+          "name": "destination_token_account"
+        },
+        {
+          "name": "destination_rule",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [118, 97, 106, 114, 97, 95, 100, 101, 115, 116]
+              },
+              {
+                "kind": "account",
+                "path": "policy"
+              },
+              {
+                "kind": "account",
+                "path": "destination_token_account"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "create_policy",
+      "discriminator": [27, 81, 33, 27, 196, 103, 246, 53],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "policy",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118, 97, 106, 114, 97, 95, 112, 111, 108, 105, 99, 121
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              },
+              {
+                "kind": "arg",
+                "path": "policy_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "policy_id",
+          "type": "u64"
+        },
+        {
+          "name": "delegated_signer",
+          "type": "pubkey"
+        },
+        {
+          "name": "allowed_mint",
+          "type": "pubkey"
+        },
+        {
+          "name": "total_budget",
+          "type": "u64"
+        },
+        {
+          "name": "per_tx_cap",
+          "type": "u64"
+        },
+        {
+          "name": "expiry_slot",
+          "type": "u64"
+        },
+        {
+          "name": "period_budget",
+          "type": "u64"
+        },
+        {
+          "name": "period_duration_slots",
+          "type": "u64"
+        },
+        {
+          "name": "min_slot_interval",
+          "type": "u64"
+        },
+        {
+          "name": "fee_bps",
+          "type": "u16"
+        },
+        {
+          "name": "fee_recipient",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "execute_guarded_transfer",
+      "discriminator": [164, 162, 46, 137, 233, 205, 143, 64],
+      "accounts": [
+        {
+          "name": "delegated_signer",
+          "signer": true
+        },
+        {
+          "name": "policy",
+          "writable": true
+        },
+        {
+          "name": "vault",
+          "writable": true
+        },
+        {
+          "name": "destination_token_account",
+          "writable": true
+        },
+        {
+          "name": "destination_rule"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "fund_vault",
+      "discriminator": [26, 33, 207, 242, 119, 108, 134, 73],
+      "accounts": [
+        {
+          "name": "funder",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "funder_token_account",
+          "writable": true
+        },
+        {
+          "name": "policy"
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "policy"
+              },
+              {
+                "kind": "const",
+                "value": [
+                  6, 221, 246, 225, 215, 101, 161, 147, 217, 203, 225, 70, 206,
+                  235, 121, 172, 28, 180, 133, 237, 95, 91, 55, 145, 58, 140,
+                  245, 133, 126, 255, 0, 169
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "allowed_mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140, 151, 37, 143, 78, 36, 137, 241, 187, 61, 16, 41, 20, 142,
+                13, 131, 11, 90, 19, 153, 218, 255, 16, 132, 4, 142, 123, 216,
+                219, 233, 248, 89
+              ]
+            }
+          }
+        },
+        {
+          "name": "allowed_mint"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "revoke_policy",
+      "discriminator": [49, 221, 179, 43, 154, 148, 35, 4],
+      "accounts": [
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "policy",
+          "writable": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "simulate_guarded_transfer",
+      "discriminator": [74, 205, 109, 32, 194, 5, 111, 191],
+      "accounts": [
+        {
+          "name": "delegated_signer",
+          "signer": true
+        },
+        {
+          "name": "policy"
+        },
+        {
+          "name": "vault"
+        },
+        {
+          "name": "destination_token_account"
+        },
+        {
+          "name": "destination_rule"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "update_policy",
+      "discriminator": [212, 245, 246, 7, 163, 151, 18, 57],
+      "accounts": [
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "policy",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "new_delegated_signer",
+          "type": {
+            "option": "pubkey"
+          }
+        },
+        {
+          "name": "new_per_tx_cap",
+          "type": {
+            "option": "u64"
+          }
+        },
+        {
+          "name": "new_expiry_slot",
+          "type": {
+            "option": "u64"
+          }
+        },
+        {
+          "name": "new_period_budget",
+          "type": {
+            "option": "u64"
+          }
+        },
+        {
+          "name": "new_period_duration_slots",
+          "type": {
+            "option": "u64"
+          }
+        },
+        {
+          "name": "new_min_slot_interval",
+          "type": {
+            "option": "u64"
+          }
+        },
+        {
+          "name": "new_fee_bps",
+          "type": {
+            "option": "u16"
+          }
+        },
+        {
+          "name": "new_fee_recipient",
+          "type": {
+            "option": "pubkey"
+          }
+        }
+      ]
+    },
+    {
+      "name": "withdraw_funds",
+      "discriminator": [241, 36, 29, 111, 208, 31, 104, 217],
+      "accounts": [
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "policy"
+        },
+        {
+          "name": "vault",
+          "writable": true
+        },
+        {
+          "name": "destination_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "DestinationRulePDA",
+      "discriminator": [87, 207, 203, 246, 68, 165, 115, 232]
+    },
+    {
+      "name": "PolicyPDA",
+      "discriminator": [175, 254, 106, 129, 71, 16, 104, 177]
+    }
+  ],
+  "events": [
+    {
+      "name": "DestinationAdded",
+      "discriminator": [231, 129, 217, 37, 0, 212, 48, 25]
+    },
+    {
+      "name": "FundsWithdrawn",
+      "discriminator": [56, 130, 230, 154, 35, 92, 11, 118]
+    },
+    {
+      "name": "PeriodReset",
+      "discriminator": [198, 246, 135, 48, 101, 134, 72, 246]
+    },
+    {
+      "name": "PolicyCreated",
+      "discriminator": [59, 189, 65, 121, 86, 157, 108, 10]
+    },
+    {
+      "name": "PolicyRevoked",
+      "discriminator": [237, 81, 204, 33, 25, 198, 186, 38]
+    },
+    {
+      "name": "PolicyUpdated",
+      "discriminator": [225, 112, 112, 67, 95, 236, 245, 161]
+    },
+    {
+      "name": "SimulationChecked",
+      "discriminator": [111, 170, 25, 31, 156, 182, 110, 150]
+    },
+    {
+      "name": "SpendAllowed",
+      "discriminator": [71, 15, 103, 157, 96, 249, 216, 97]
+    },
+    {
+      "name": "TransferAllowed",
+      "discriminator": [20, 15, 112, 173, 98, 152, 138, 211]
+    },
+    {
+      "name": "VaultFunded",
+      "discriminator": [192, 119, 245, 193, 55, 223, 195, 50]
+    },
+    {
+      "name": "VelocityLimitTriggered",
+      "discriminator": [21, 83, 254, 121, 56, 76, 241, 199]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "InvalidBudget",
+      "msg": "Budget must be > 0 and per_tx_cap must be > 0 and <= total_budget"
+    },
+    {
+      "code": 6001,
+      "name": "ExpiryInPast",
+      "msg": "Expiry slot must be in the future"
+    },
+    {
+      "code": 6002,
+      "name": "Unauthorized",
+      "msg": "Unauthorized: caller is not the policy owner"
+    },
+    {
+      "code": 6003,
+      "name": "PolicyRevoked",
+      "msg": "Policy has been revoked"
+    },
+    {
+      "code": 6004,
+      "name": "PolicyExpired",
+      "msg": "Policy has expired"
+    },
+    {
+      "code": 6005,
+      "name": "InvalidDelegateSigner",
+      "msg": "Invalid delegated signer"
+    },
+    {
+      "code": 6006,
+      "name": "AmountZero",
+      "msg": "Amount must be > 0"
+    },
+    {
+      "code": 6007,
+      "name": "PerTxCapExceeded",
+      "msg": "Amount exceeds per-transaction cap"
+    },
+    {
+      "code": 6008,
+      "name": "TotalBudgetExceeded",
+      "msg": "Transfer would exceed total budget"
+    },
+    {
+      "code": 6009,
+      "name": "DestinationNotAllowed",
+      "msg": "Destination is not on the allowlist"
+    },
+    {
+      "code": 6010,
+      "name": "MintMismatch",
+      "msg": "Token mint does not match policy allowed_mint"
+    },
+    {
+      "code": 6011,
+      "name": "VaultMintMismatch",
+      "msg": "Vault mint does not match policy allowed_mint"
+    },
+    {
+      "code": 6012,
+      "name": "InvalidVaultAuthority",
+      "msg": "Vault authority is not the policy PDA"
+    },
+    {
+      "code": 6013,
+      "name": "VaultInsufficientBalance",
+      "msg": "Vault has insufficient balance"
+    },
+    {
+      "code": 6014,
+      "name": "ArithmeticOverflow",
+      "msg": "Arithmetic overflow"
+    },
+    {
+      "code": 6015,
+      "name": "DestinationAlreadyExists",
+      "msg": "Destination already exists in allowlist"
+    },
+    {
+      "code": 6016,
+      "name": "PeriodBudgetExceeded",
+      "msg": "Transfer would exceed the current period budget"
+    },
+    {
+      "code": 6017,
+      "name": "VelocityLimitExceeded",
+      "msg": "Transfer violates the policy velocity limit"
+    },
+    {
+      "code": 6018,
+      "name": "FeeBpsTooHigh",
+      "msg": "Fee basis points exceed the maximum allowed value"
+    },
+    {
+      "code": 6019,
+      "name": "InvalidWithdrawalDestination",
+      "msg": "Withdrawal destination must be owned by the policy owner"
+    }
+  ],
+  "types": [
+    {
+      "name": "DestinationAdded",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "policy",
+            "type": "pubkey"
+          },
+          {
+            "name": "destination",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DestinationRulePDA",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "policy",
+            "type": "pubkey"
+          },
+          {
+            "name": "destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FundsWithdrawn",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "policy",
+            "type": "pubkey"
+          },
+          {
+            "name": "vault",
+            "type": "pubkey"
+          },
+          {
+            "name": "destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PeriodReset",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "policy",
+            "type": "pubkey"
+          },
+          {
+            "name": "previous_start_slot",
+            "type": "u64"
+          },
+          {
+            "name": "new_start_slot",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PolicyCreated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "policy",
+            "type": "pubkey"
+          },
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "delegated_signer",
+            "type": "pubkey"
+          },
+          {
+            "name": "allowed_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_budget",
+            "type": "u64"
+          },
+          {
+            "name": "per_tx_cap",
+            "type": "u64"
+          },
+          {
+            "name": "expiry_slot",
+            "type": "u64"
+          },
+          {
+            "name": "policy_id",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PolicyPDA",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "delegated_signer",
+            "type": "pubkey"
+          },
+          {
+            "name": "allowed_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_budget",
+            "type": "u64"
+          },
+          {
+            "name": "spent_amount",
+            "type": "u64"
+          },
+          {
+            "name": "per_tx_cap",
+            "type": "u64"
+          },
+          {
+            "name": "expiry_slot",
+            "type": "u64"
+          },
+          {
+            "name": "revoked",
+            "type": "bool"
+          },
+          {
+            "name": "policy_id",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "policy_version",
+            "type": "u8"
+          },
+          {
+            "name": "period_budget",
+            "type": "u64"
+          },
+          {
+            "name": "period_spent",
+            "type": "u64"
+          },
+          {
+            "name": "period_start_slot",
+            "type": "u64"
+          },
+          {
+            "name": "period_duration_slots",
+            "type": "u64"
+          },
+          {
+            "name": "min_slot_interval",
+            "type": "u64"
+          },
+          {
+            "name": "last_spend_slot",
+            "type": "u64"
+          },
+          {
+            "name": "fee_bps",
+            "type": "u16"
+          },
+          {
+            "name": "fee_recipient",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PolicyRevoked",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "policy",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PolicyUpdated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "policy",
+            "type": "pubkey"
+          },
+          {
+            "name": "policy_version",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SimulationChecked",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "policy",
+            "type": "pubkey"
+          },
+          {
+            "name": "destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "would_reset_period",
+            "type": "bool"
+          },
+          {
+            "name": "current_slot",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SpendAllowed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "policy",
+            "type": "pubkey"
+          },
+          {
+            "name": "destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "spent_amount",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TransferAllowed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "policy",
+            "type": "pubkey"
+          },
+          {
+            "name": "destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "spent_amount",
+            "type": "u64"
+          },
+          {
+            "name": "period_spent",
+            "type": "u64"
+          },
+          {
+            "name": "slot",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VaultFunded",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "policy",
+            "type": "pubkey"
+          },
+          {
+            "name": "vault",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "funder",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VelocityLimitTriggered",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "policy",
+            "type": "pubkey"
+          },
+          {
+            "name": "last_spend_slot",
+            "type": "u64"
+          },
+          {
+            "name": "min_slot_interval",
+            "type": "u64"
+          },
+          {
+            "name": "current_slot",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ]
+}

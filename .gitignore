@@ -1,0 +1,49 @@
+# Anchor / Solana
+.anchor
+target/
+test-ledger/
+.surfpool
+
+# Node
+node_modules/
+app/node_modules/
+.yarn/
+yarn-error.log
+*.tgz
+
+# Build output
+app/dist/
+app/screenshots/
+packages/*/dist/
+
+# Demo runtime state (contains live on-chain addresses; regenerate via setup-demo.ts)
+demo-state.json
+
+# Keypairs — NEVER commit private keys
+demo-keypairs/
+deployer.json
+deployer*.json
+
+# Environment
+.env
+.env.*
+
+# OS
+.DS_Store
+
+# Private planning docs — not for public repo
+BACKEND_ROADMAP.md
+COMPETITOR_POSITIONING.md
+UPGRADE_SPEC.md
+SUBMISSION_DRAFT.md
+FEATURE_GATES.md
+PRODUCT_NARRATIVE.md
+FRONTEND_HANDOFF.md
+context.md
+POSITIONING.md
+
+# Claude Code session files
+.claude/
+
+# Rust
+**/*.rs.bk

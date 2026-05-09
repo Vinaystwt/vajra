@@ -1,0 +1,46 @@
+{
+  "license": "ISC",
+  "scripts": {
+    "build": "cd packages/sdk && npm run build && cd ../mcp && npm run build",
+    "test": "cargo test --manifest-path programs/vajra/Cargo.toml && cd packages/sdk && npm test && cd ../mcp && npm test",
+    "demo:full": "ts-node scripts/full-demo.ts",
+    "demo:attack": "ts-node scripts/attack-demo.ts",
+    "demo:red-team": "npm run build && node scripts/red-team-sandbox.mjs",
+    "demo:x402": "ts-node scripts/x402-demo.ts",
+    "proof:export": "ts-node scripts/export-proof.ts",
+    "proof:latest": "npm run build && node scripts/export-mandates.mjs && node scripts/generate-latest-proof.mjs",
+    "verify:fixtures": "npm run build && node scripts/verify-fixtures.mjs",
+    "verify:red-team": "npm run proof:latest && node scripts/verify-fixtures.mjs",
+    "verify:tx": "npm run build && node scripts/verify-payment.mjs",
+    "receipt:tx": "npm run build && node scripts/export-receipt.mjs",
+    "mandates:list": "npm run build && node scripts/list-mandates.mjs",
+    "mandate:show": "npm run build && node scripts/show-mandate.mjs",
+    "check:devnet": "ts-node scripts/check-devnet-readiness.ts",
+    "check:deployer": "ts-node scripts/check-deployer.ts",
+    "devnet:setup": "ts-node scripts/devnet-setup.ts",
+    "devnet:demo": "ts-node scripts/devnet-run-demo.ts",
+    "devnet:proof": "ts-node scripts/devnet-proof.ts",
+    "devnet:red-team": "npm run build && node scripts/devnet-red-team.mjs",
+    "lint:fix": "NODE_DISABLE_COMPILE_CACHE=1 node scripts/format.mjs",
+    "lint": "NODE_DISABLE_COMPILE_CACHE=1 node scripts/format.mjs --check"
+  },
+  "dependencies": {
+    "@anchor-lang/core": "^1.0.2",
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "^1.98.4",
+    "@types/node": "^25.6.0",
+    "bs58": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.0",
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^9.0.0",
+    "chai": "^4.3.4",
+    "mocha": "^9.0.3",
+    "prettier": "^3.8.3",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "network": "devnet",
+  "source": "fresh-devnet",
+  "program": "https://explorer.solana.com/address/APn6AN7FphYAjUEJWhvGZa1T5nfQDNmCcFW2244p4UoD?cluster=devnet",
+  "policy": "https://explorer.solana.com/address/vCeG5UbD8BwpgDCtEetj5dp2haR1Vd6cDPFBhCvQ8yp?cluster=devnet",
+  "vault": "https://explorer.solana.com/address/GY9NCwVb5e4wRhikpLmSQELMr5ynjdFdDD2vdYvMwBMb?cluster=devnet",
+  "create_policy": "https://explorer.solana.com/tx/74w6kyDa7kEtL9enPnuJxh4uEXxQQfY1x8uBwmMUxgcwuhWzFKbXvom86ZaK6y8vdo6mnqPeP9bgNZ9WH6MhDF5?cluster=devnet",
+  "fund_vault": "https://explorer.solana.com/tx/2mD9BZwvooeybUqcPk77zZD8PzKHAF4GytSv7s5e2QTsbMkEt8FZTjZYPdaaMKvC6wCaV8SLnpuz9G1YHtxTR3hm?cluster=devnet",
+  "add_destination": "https://explorer.solana.com/tx/2Gsbb536Dv8TyaXpGB8L4uJiJEfkKMfTJJr7NC88ycKrQeU2MmV9nLqwGziixo9GCn2jvCEzukQiLkCXTpzt7gJq?cluster=devnet",
+  "allowed_payment": "https://explorer.solana.com/tx/382Mj4AgfWcMcmzaMZebrbmbBBGTDezghXWssJnFBy6y33ZkpT48uFHs7toerSFmPmGuAVtefM1CWvG2miDYXvAo?cluster=devnet",
+  "raw_wallet_drain": "https://explorer.solana.com/tx/wTo4fANWAG6P3azWJ4W3MQVYn5rYpZp6s3ZijsKsN4xGP2ACCGieZgtYKXZ6wiFNW3WTek9Paeco9bozGye95p3?cluster=devnet",
+  "blocked_drain": "https://explorer.solana.com/tx/5yWAEdtjihJjGWk9phXLvAG831r9yqvT7qrPgbmaFXoS5whsFSLLuuLLFGnUmKpAE22RWvFxPk3NDn1oCqfEqEf8?cluster=devnet"
+}

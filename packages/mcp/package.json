@@ -1,0 +1,33 @@
+{
+  "name": "@vinaystwt/vajra-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Vajra policy vault operations on Solana.",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/src/server.js",
+  "bin": {
+    "vajra-mcp": "dist/src/server.js"
+  },
+  "files": [
+    "dist/src",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "NODE_DISABLE_COMPILE_CACHE=1 node ./node_modules/typescript/bin/tsc -p tsconfig.json",
+    "prepack": "npm run build",
+    "test": "NODE_DISABLE_COMPILE_CACHE=1 node dist/test/smoke.test.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.21.0",
+    "@solana/web3.js": "^1.98.4",
+    "@vinaystwt/vajra-sdk": "^0.1.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "typescript": "^5.7.3"
+  }
+}

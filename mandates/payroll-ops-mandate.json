@@ -1,0 +1,23 @@
+{
+  "id": "payroll-ops",
+  "name": "Payroll/Ops Mandate",
+  "target_user": "Ops automation that sends recurring fixed payouts.",
+  "use_case": "Scheduled payouts to known recipients without raw treasury key exposure.",
+  "risk_model": "High interval spacing, explicit recipient allowlist, long expiry only when operationally needed.",
+  "recommended_total_budget": "2000000000",
+  "recommended_per_tx_cap": "250000000",
+  "recommended_period_budget": "500000000",
+  "recommended_velocity_limit": "1000 slots",
+  "recommended_expiry": "30 days",
+  "allowed_destination_model": "Recipient token accounts approved by the owner.",
+  "revoke_behavior": "Owner revokes after payout cycle or recipient change.",
+  "verifier_notes": "Receipt proves whether funds moved and which rule applied.",
+  "sdk_snippet": "const mandate = getMandate('payroll-ops');",
+  "policy_config": {
+    "totalBudget": "2000000000",
+    "perTxCap": "250000000",
+    "periodBudget": "500000000",
+    "periodDurationSlots": "216000",
+    "minSlotInterval": "1000"
+  }
+}

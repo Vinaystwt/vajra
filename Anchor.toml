@@ -1,0 +1,29 @@
+[toolchain]
+package_manager = "yarn"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+vajra = "APn6AN7FphYAjUEJWhvGZa1T5nfQDNmCcFW2244p4UoD"
+
+[programs.devnet]
+vajra = "APn6AN7FphYAjUEJWhvGZa1T5nfQDNmCcFW2244p4UoD"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+# Tests run via cargo (litesvm, no validator needed):
+#   cargo test --manifest-path programs/vajra/Cargo.toml
+#
+# anchor test / anchor build require cargo-build-sbf on PATH:
+#   PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH" anchor build
+#
+# Deploy to devnet:
+#   PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH" anchor deploy --provider.cluster devnet --provider.wallet <keypair>
+test = "cargo test --manifest-path programs/vajra/Cargo.toml"
+
+[hooks]

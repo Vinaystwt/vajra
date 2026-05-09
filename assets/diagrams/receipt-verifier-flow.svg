@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="900" height="340" font-family="'SF Mono', 'Fira Mono', monospace" font-size="13">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="rgba(237,237,237,0.45)"/>
+    </marker>
+    <marker id="arr-cyan" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#00E5FF"/>
+    </marker>
+    <marker id="arr-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#E11D48"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="340" fill="#050505" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" fill="rgba(237,237,237,0.85)" font-size="15" font-weight="600" letter-spacing="0.5">Receipt Verifier Flow</text>
+  <text x="450" y="52" text-anchor="middle" fill="rgba(237,237,237,0.35)" font-size="11">Devnet transaction → receipt export → verifier → classification</text>
+
+  <!-- Step 1: Devnet tx -->
+  <rect x="30" y="90" width="140" height="60" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(237,237,237,0.15)" stroke-width="1"/>
+  <text x="100" y="115" text-anchor="middle" fill="rgba(237,237,237,0.8)" font-size="11" font-weight="600">Devnet Tx</text>
+  <text x="100" y="131" text-anchor="middle" fill="rgba(237,237,237,0.38)" font-size="10">signature + logs</text>
+  <text x="100" y="145" text-anchor="middle" fill="rgba(237,237,237,0.38)" font-size="10">token balances</text>
+
+  <!-- Arrow 1 -->
+  <line x1="170" y1="120" x2="210" y2="120" stroke="rgba(237,237,237,0.4)" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 2: Receipt Exporter -->
+  <rect x="210" y="90" width="155" height="60" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(237,237,237,0.15)" stroke-width="1"/>
+  <text x="287" y="115" text-anchor="middle" fill="rgba(237,237,237,0.8)" font-size="11" font-weight="600">Receipt Exporter</text>
+  <text x="287" y="131" text-anchor="middle" fill="rgba(237,237,237,0.38)" font-size="10">JSON · Markdown · CSV</text>
+  <text x="287" y="145" text-anchor="middle" fill="rgba(237,237,237,0.38)" font-size="10">vault_delta · avoided_loss</text>
+
+  <!-- Arrow 2 -->
+  <line x1="365" y1="120" x2="405" y2="120" stroke="rgba(237,237,237,0.4)" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 3: Verifier -->
+  <rect x="405" y="90" width="150" height="60" rx="8" fill="rgba(0,229,255,0.05)" stroke="rgba(0,229,255,0.35)" stroke-width="1.5"/>
+  <text x="480" y="115" text-anchor="middle" fill="#00E5FF" font-size="11" font-weight="600">Verifier</text>
+  <text x="480" y="131" text-anchor="middle" fill="rgba(237,237,237,0.38)" font-size="10">reads tx from devnet RPC</text>
+  <text x="480" y="145" text-anchor="middle" fill="rgba(237,237,237,0.38)" font-size="10">checks program · logs · delta</text>
+
+  <!-- 4 classification arrows -->
+  <!-- vajra_allowed -->
+  <line x1="555" y1="105" x2="620" y2="90" stroke="#00E5FF" stroke-width="1.5" marker-end="url(#arr-cyan)"/>
+  <rect x="620" y="68" width="135" height="40" rx="6" fill="rgba(0,229,255,0.08)" stroke="rgba(0,229,255,0.35)" stroke-width="1"/>
+  <text x="687" y="84" text-anchor="middle" fill="#00E5FF" font-size="11" font-weight="600">vajra_allowed</text>
+  <text x="687" y="100" text-anchor="middle" fill="rgba(237,237,237,0.4)" font-size="10">all guards passed · transfer sent</text>
+
+  <!-- vajra_blocked -->
+  <line x1="555" y1="118" x2="620" y2="130" stroke="#E11D48" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <rect x="620" y="115" width="135" height="40" rx="6" fill="rgba(225,29,72,0.08)" stroke="rgba(225,29,72,0.35)" stroke-width="1"/>
+  <text x="687" y="131" text-anchor="middle" fill="#E11D48" font-size="11" font-weight="600">vajra_blocked</text>
+  <text x="687" y="147" text-anchor="middle" fill="rgba(237,237,237,0.4)" font-size="10">guard triggered · vault_delta=0</text>
+
+  <!-- not_vajra -->
+  <line x1="555" y1="135" x2="620" y2="170" stroke="rgba(237,237,237,0.3)" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="620" y="160" width="135" height="40" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(237,237,237,0.15)" stroke-width="1"/>
+  <text x="687" y="177" text-anchor="middle" fill="rgba(237,237,237,0.55)" font-size="11" font-weight="600">not_vajra</text>
+  <text x="687" y="193" text-anchor="middle" fill="rgba(237,237,237,0.35)" font-size="10">raw SPL · not this program</text>
+
+  <!-- unknown -->
+  <line x1="555" y1="145" x2="620" y2="212" stroke="rgba(237,237,237,0.2)" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="620" y="205" width="135" height="40" rx="6" fill="rgba(255,255,255,0.02)" stroke="rgba(237,237,237,0.1)" stroke-width="1"/>
+  <text x="687" y="222" text-anchor="middle" fill="rgba(237,237,237,0.4)" font-size="11" font-weight="600">unknown</text>
+  <text x="687" y="238" text-anchor="middle" fill="rgba(237,237,237,0.28)" font-size="10">insufficient data</text>
+
+  <!-- Merchant section -->
+  <rect x="30" y="225" width="560" height="75" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="310" y="248" text-anchor="middle" fill="rgba(237,237,237,0.55)" font-size="11" font-weight="600">Merchant / Auditor Verification</text>
+  <text x="310" y="267" text-anchor="middle" fill="rgba(237,237,237,0.4)" font-size="10">verifyVajraPayment(signature, network) → { classification, vaultDelta, signature, explorerUrl }</text>
+  <text x="310" y="283" text-anchor="middle" fill="rgba(237,237,237,0.3)" font-size="10">verifyVajraPaymentFixture(receipt) → deterministic · no RPC required</text>
+</svg>

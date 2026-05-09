@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="'SF Mono', 'Fira Mono', monospace" font-size="13">
+  <defs>
+    <marker id="arrow-cyan" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#00E5FF"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="rgba(237,237,237,0.5)"/>
+    </marker>
+    <marker id="arrow-crimson" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#E11D48"/>
+    </marker>
+    <filter id="glow-cyan">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="#050505" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" fill="rgba(237,237,237,0.85)" font-size="15" font-weight="600" letter-spacing="0.5">Vajra — Architecture</text>
+  <text x="450" y="57" text-anchor="middle" fill="rgba(237,237,237,0.35)" font-size="11">PolicyPDA owns vault authority · Agent key can only request</text>
+
+  <!-- ============ ROW 1: Owner + Agent ============ -->
+  <!-- Owner box -->
+  <rect x="60" y="100" width="140" height="60" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(237,237,237,0.15)" stroke-width="1"/>
+  <text x="130" y="127" text-anchor="middle" fill="rgba(237,237,237,0.85)" font-size="12" font-weight="600">Owner</text>
+  <text x="130" y="146" text-anchor="middle" fill="rgba(237,237,237,0.38)" font-size="10">treasury keypair</text>
+
+  <!-- Agent box -->
+  <rect x="60" y="260" width="140" height="60" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(237,237,237,0.15)" stroke-width="1"/>
+  <text x="130" y="287" text-anchor="middle" fill="rgba(237,237,237,0.85)" font-size="12" font-weight="600">Agent Key</text>
+  <text x="130" y="306" text-anchor="middle" fill="rgba(237,237,237,0.38)" font-size="10">delegated signer</text>
+
+  <!-- ============ Vajra Program box ============ -->
+  <rect x="280" y="160" width="180" height="200" rx="10" fill="rgba(0,229,255,0.04)" stroke="#00E5FF" stroke-width="1.5"/>
+  <text x="370" y="188" text-anchor="middle" fill="#00E5FF" font-size="12" font-weight="600" filter="url(#glow-cyan)">Vajra Program</text>
+
+  <!-- Guards list -->
+  <text x="295" y="212" fill="rgba(237,237,237,0.55)" font-size="10">✓ revoke / expiry</text>
+  <text x="295" y="228" fill="rgba(237,237,237,0.55)" font-size="10">✓ delegated signer</text>
+  <text x="295" y="244" fill="rgba(237,237,237,0.55)" font-size="10">✓ per-tx cap</text>
+  <text x="295" y="260" fill="rgba(237,237,237,0.55)" font-size="10">✓ total budget</text>
+  <text x="295" y="276" fill="rgba(237,237,237,0.55)" font-size="10">✓ period budget</text>
+  <text x="295" y="292" fill="rgba(237,237,237,0.55)" font-size="10">✓ velocity limit</text>
+  <text x="295" y="308" fill="rgba(237,237,237,0.55)" font-size="10">✓ destination allow list</text>
+  <text x="295" y="324" fill="rgba(237,237,237,0.55)" font-size="10">✓ vault authority check</text>
+  <text x="295" y="340" fill="rgba(237,237,237,0.55)" font-size="10">✓ vault balance</text>
+
+  <!-- ============ PolicyPDA box ============ -->
+  <rect x="545" y="100" width="155" height="60" rx="8" fill="rgba(0,229,255,0.06)" stroke="#00E5FF" stroke-width="1.5"/>
+  <text x="622" y="127" text-anchor="middle" fill="#00E5FF" font-size="12" font-weight="600" filter="url(#glow-cyan)">PolicyPDA</text>
+  <text x="622" y="146" text-anchor="middle" fill="rgba(237,237,237,0.38)" font-size="10">vault authority · policy state</text>
+
+  <!-- ============ SPL Vault box ============ -->
+  <rect x="545" y="240" width="155" height="60" rx="8" fill="rgba(0,229,255,0.04)" stroke="rgba(0,229,255,0.4)" stroke-width="1"/>
+  <text x="622" y="267" text-anchor="middle" fill="rgba(237,237,237,0.85)" font-size="12" font-weight="600">SPL Vault ATA</text>
+  <text x="622" y="286" text-anchor="middle" fill="rgba(237,237,237,0.38)" font-size="10">owned by PolicyPDA</text>
+
+  <!-- ============ Destination box ============ -->
+  <rect x="740" y="240" width="130" height="60" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(237,237,237,0.15)" stroke-width="1"/>
+  <text x="805" y="267" text-anchor="middle" fill="rgba(237,237,237,0.85)" font-size="12" font-weight="600">Destination</text>
+  <text x="805" y="286" text-anchor="middle" fill="rgba(237,237,237,0.38)" font-size="10">allowed ATA</text>
+
+  <!-- ============ ARROWS ============ -->
+
+  <!-- Owner → PolicyPDA (init/fund) -->
+  <line x1="200" y1="120" x2="543" y2="120" stroke="rgba(237,237,237,0.35)" stroke-width="1.5" marker-end="url(#arrow-white)" stroke-dasharray="5,3"/>
+  <text x="370" y="112" text-anchor="middle" fill="rgba(237,237,237,0.35)" font-size="10">create policy · fund vault</text>
+
+  <!-- Owner → PolicyPDA (vault authority dashed outline) -->
+  <line x1="622" y1="160" x2="622" y2="238" stroke="rgba(0,229,255,0.4)" stroke-width="1.5" marker-end="url(#arrow-cyan)" stroke-dasharray="4,3"/>
+  <text x="632" y="207" fill="rgba(0,229,255,0.6)" font-size="10">vault</text>
+  <text x="632" y="219" fill="rgba(0,229,255,0.6)" font-size="10">authority</text>
+
+  <!-- Agent → Vajra Program (request) -->
+  <line x1="200" y1="290" x2="278" y2="290" stroke="rgba(237,237,237,0.4)" stroke-width="1.5" marker-end="url(#arrow-white)"/>
+  <text x="239" y="282" text-anchor="middle" fill="rgba(237,237,237,0.38)" font-size="10">request</text>
+
+  <!-- Vajra Program → PolicyPDA (read policy) -->
+  <line x1="460" y1="200" x2="543" y2="148" stroke="rgba(0,229,255,0.5)" stroke-width="1.5" marker-end="url(#arrow-cyan)" stroke-dasharray="5,3"/>
+  <text x="502" y="172" text-anchor="middle" fill="rgba(0,229,255,0.55)" font-size="10">read policy</text>
+
+  <!-- Vajra Program → SPL Vault (CPI transfer if pass) -->
+  <line x1="460" y1="310" x2="543" y2="278" stroke="#00E5FF" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+  <text x="500" y="304" text-anchor="middle" fill="#00E5FF" font-size="10">CPI transfer</text>
+  <text x="500" y="316" text-anchor="middle" fill="rgba(0,229,255,0.55)" font-size="10">if all guards pass</text>
+
+  <!-- SPL Vault → Destination -->
+  <line x1="700" y1="270" x2="738" y2="270" stroke="#00E5FF" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+
+  <!-- Blocked path annotation -->
+  <rect x="280" y="400" width="340" height="60" rx="8" fill="rgba(225,29,72,0.05)" stroke="rgba(225,29,72,0.3)" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="450" y="425" text-anchor="middle" fill="#E11D48" font-size="12" font-weight="600">Guard fails → tx reverts</text>
+  <text x="450" y="445" text-anchor="middle" fill="rgba(237,237,237,0.45)" font-size="10">vault_delta = 0 · inner_token_transfers = 0 · failed tx is the proof</text>
+
+  <!-- Arrow from program to blocked box -->
+  <line x1="370" y1="360" x2="370" y2="398" stroke="rgba(225,29,72,0.5)" stroke-width="1.5" marker-end="url(#arrow-crimson)" stroke-dasharray="4,3"/>
+</svg>

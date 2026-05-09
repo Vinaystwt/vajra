@@ -1,0 +1,21 @@
+{
+  "cluster": "local-dry-run",
+  "signatures": [
+    {
+      "attemptType": "good-spend",
+      "signature": "local-good-spend-allowed",
+      "result": "allowed"
+    },
+    {
+      "attemptType": "over-cap",
+      "signature": "local-over-cap-blocked",
+      "result": "blocked"
+    },
+    {
+      "attemptType": "raw-drain",
+      "signature": "local-raw-drain-blocked",
+      "result": "blocked"
+    }
+  ],
+  "note": "Real devnet signatures can be added after approved deployment and demo execution."
+}

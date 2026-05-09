@@ -1,0 +1,40 @@
+{
+  "name": "@vinaystwt/vajra-sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for Vajra program-owned policy vaults on Solana.",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/src/index.js",
+      "types": "./dist/src/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src/idl",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "NODE_DISABLE_COMPILE_CACHE=1 node ./node_modules/typescript/bin/tsc --declaration --declarationMap --sourceMap --outDir dist --rootDir . --target ES2022 --module NodeNext --moduleResolution NodeNext --strict --esModuleInterop --resolveJsonModule --skipLibCheck --types node $(find src examples -name '*.ts' -print) && mkdir -p dist/src/idl && cp src/idl/vajra.json dist/src/idl/vajra.json",
+    "clean": "rm -rf dist",
+    "prepack": "npm run build",
+    "test": "NODE_DISABLE_COMPILE_CACHE=1 node test/receipt.test.mjs"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.31.1",
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "^1.98.4",
+    "bn.js": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.0",
+    "@types/node": "^25.6.0",
+    "typescript": "^5.7.3"
+  }
+}

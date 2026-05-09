@@ -1,0 +1,23 @@
+{
+  "id": "defi-bot",
+  "name": "DeFi Bot Mandate",
+  "target_user": "Automated treasury or strategy bots.",
+  "use_case": "Bounded ops payments to pre-approved token accounts.",
+  "risk_model": "Higher total budget with strict destination rules and slower velocity.",
+  "recommended_total_budget": "500000000",
+  "recommended_per_tx_cap": "50000000",
+  "recommended_period_budget": "150000000",
+  "recommended_velocity_limit": "50 slots",
+  "recommended_expiry": "3 days",
+  "allowed_destination_model": "Protocol-owned token accounts that the operator approves in advance.",
+  "revoke_behavior": "Owner revokes if strategy code or destination list changes.",
+  "verifier_notes": "Verifier confirms the payment was routed through the deployed Vajra program.",
+  "sdk_snippet": "const policy = mandateToPolicyConfig(getMandate('defi-bot')!);",
+  "policy_config": {
+    "totalBudget": "500000000",
+    "perTxCap": "50000000",
+    "periodBudget": "150000000",
+    "periodDurationSlots": "216000",
+    "minSlotInterval": "50"
+  }
+}

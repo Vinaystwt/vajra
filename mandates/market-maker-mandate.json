@@ -1,0 +1,23 @@
+{
+  "id": "market-maker",
+  "name": "Market Maker Mandate",
+  "target_user": "High-frequency automated signers with bounded payout authority.",
+  "use_case": "Rapid but capped transfers to a small set of approved venues.",
+  "risk_model": "Higher period budget, tight destination set, and minimum slot interval.",
+  "recommended_total_budget": "5000000000",
+  "recommended_per_tx_cap": "100000000",
+  "recommended_period_budget": "1000000000",
+  "recommended_velocity_limit": "1 slot",
+  "recommended_expiry": "1 day",
+  "allowed_destination_model": "Venue-specific token accounts only.",
+  "revoke_behavior": "Owner revokes if venue key, signer, or strategy changes.",
+  "verifier_notes": "Verification should pin expected destination and amount for each payment.",
+  "sdk_snippet": "const mandate = getMandate('market-maker');",
+  "policy_config": {
+    "totalBudget": "5000000000",
+    "perTxCap": "100000000",
+    "periodBudget": "1000000000",
+    "periodDurationSlots": "216000",
+    "minSlotInterval": "1"
+  }
+}

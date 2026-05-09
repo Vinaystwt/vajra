@@ -1,0 +1,23 @@
+{
+  "id": "dao-ops",
+  "name": "DAO Ops Mandate",
+  "target_user": "DAO operators automating small recurring payouts.",
+  "use_case": "Routine service-provider payments without handing an agent treasury authority.",
+  "risk_model": "Moderate caps, daily budget windows, explicit allowlist, owner recovery.",
+  "recommended_total_budget": "1000000000",
+  "recommended_per_tx_cap": "25000000",
+  "recommended_period_budget": "100000000",
+  "recommended_velocity_limit": "20 slots",
+  "recommended_expiry": "30 days",
+  "allowed_destination_model": "Approved contributor or vendor token accounts.",
+  "revoke_behavior": "Owner revokes at end of mandate or after vendor rotation.",
+  "verifier_notes": "Auditors can compare receipt CSV rows against policy state and transaction logs.",
+  "sdk_snippet": "listMandates().find((m) => m.id === 'dao-ops')",
+  "policy_config": {
+    "totalBudget": "1000000000",
+    "perTxCap": "25000000",
+    "periodBudget": "100000000",
+    "periodDurationSlots": "216000",
+    "minSlotInterval": "20"
+  }
+}
