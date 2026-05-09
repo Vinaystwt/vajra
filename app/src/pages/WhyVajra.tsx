@@ -195,7 +195,7 @@ export function WhyVajra() {
             </Link>
             <Link to="/proofs">
               <Button variant="ghost" size="md">
-                View cached devnet proofs
+                View devnet proof artifacts
               </Button>
             </Link>
           </motion.div>
@@ -396,7 +396,7 @@ export function WhyVajra() {
             </Link>
             <Link to="/proofs">
               <Button variant="ghost" size="lg">
-                View cached devnet proofs
+                View devnet proof artifacts
               </Button>
             </Link>
             <Link to="/developers">

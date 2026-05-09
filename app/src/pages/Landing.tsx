@@ -545,7 +545,7 @@ await client.spend({
           <FadeIn delay={0.1} className="flex flex-wrap gap-3 shrink-0">
             <Link to="/proofs">
               <Button variant="primary" size="lg">
-                View cached devnet proofs
+                View devnet proof artifacts
               </Button>
             </Link>
             <Link to="/why">

@@ -259,7 +259,7 @@ export function Proofs() {
           >
             <Info size={12} className="text-[rgba(237,237,237,0.35)]" />
             <span className="text-xs font-mono text-[rgba(237,237,237,0.45)]">
-              Cached Devnet Proofs — not live chain data
+              Devnet proof artifacts · Explorer links verify on-chain
             </span>
           </motion.div>
         </motion.div>

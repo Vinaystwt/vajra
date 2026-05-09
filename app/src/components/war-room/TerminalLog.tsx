@@ -32,11 +32,16 @@ function linePrefix(line: string): string {
 
 export function TerminalLog({ logs, mode }: Props) {
   const reduced = useReducedMotionSafe();
-  const endRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const isCompromised = mode === "compromised";
 
+  // Scroll the overflow container to bottom — do NOT use scrollIntoView,
+  // which propagates up to window and pulls the page away from the hero.
   useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: "smooth" });
+    const el = containerRef.current;
+    if (el) {
+      el.scrollTop = el.scrollHeight;
+    }
   }, [logs]);
 
   return (
@@ -75,8 +80,11 @@ export function TerminalLog({ logs, mode }: Props) {
         </div>
       </div>
 
-      {/* Log lines */}
-      <div className="bg-[#070707] p-4 font-mono text-[11px] leading-5 overflow-y-auto max-h-56">
+      {/* Log lines — overflow-y-auto container; scroll happens here, not window */}
+      <div
+        ref={containerRef}
+        className="bg-[#070707] p-4 font-mono text-[11px] leading-5 overflow-y-auto max-h-56"
+      >
         <AnimatePresence initial={false}>
           {logs.map((line, i) => (
             <motion.div
@@ -105,7 +113,6 @@ export function TerminalLog({ logs, mode }: Props) {
             </motion.div>
           ))}
         </AnimatePresence>
-        <div ref={endRef} />
       </div>
     </div>
   );

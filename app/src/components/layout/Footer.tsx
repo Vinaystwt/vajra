@@ -144,7 +144,7 @@ export function Footer() {
 
         <div className="mt-8 pt-6 border-t border-[rgba(255,255,255,0.05)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <span className="text-xs text-[rgba(237,237,237,0.28)]">
-            Proof data is cached from devnet. Not live chain data.
+            Proof artifacts sourced from devnet. Explorer links verify on-chain.
           </span>
           <span className="text-xs font-mono text-[rgba(237,237,237,0.2)]">MIT License</span>
         </div>

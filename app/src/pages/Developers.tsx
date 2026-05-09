@@ -716,9 +716,10 @@ function X402Tab() {
             title="Machine-to-machine payments with spending boundaries."
           />
           <p className="text-sm text-[rgba(237,237,237,0.55)] leading-relaxed">
-            Reference flow showing an API-buying agent paying through Vajra instead of receiving
-            raw wallet access. Local and deterministic — does not claim production integration
-            with an external x402 service.
+            Local reference integration showing an API-buying agent paying through a Vajra
+            policy vault instead of receiving raw wallet authority. See{" "}
+            <code className="text-cyan font-mono text-[10px]">examples/x402-vajra</code>
+            {" "}for the full runnable example.
           </p>
 
           {/* Animated step flow */}

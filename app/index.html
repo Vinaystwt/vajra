@@ -25,6 +25,15 @@
     <link rel="canonical" href="https://usevajra.xyz" />
   </head>
   <body>
+    <!-- Prevent browser scroll restoration from landing mid-page on hard reload -->
+    <script>
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      if (!location.hash) {
+        window.scrollTo(0, 0);
+      }
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

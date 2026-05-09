@@ -151,7 +151,7 @@ export function MerchantVerifierPanel({ data }: Props) {
 
       {/* Note */}
       <p className="text-[10px] font-mono text-muted leading-relaxed">
-        Demo verifier uses committed devnet proof artifacts. CLI verifier available in SDK.
+        Verifier compares against devnet proof artifacts. CLI verifier available in the SDK.
       </p>
     </div>
   );
