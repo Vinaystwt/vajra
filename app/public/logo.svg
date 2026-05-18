@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 80" fill="none">
+  <!-- Dark background -->
+  <rect width="230" height="80" fill="#080b12"/>
+
+  <!-- Rounded square icon container -->
+  <rect x="4" y="4" width="72" height="72" rx="16" fill="#0c1420"/>
+  <rect x="4" y="4" width="72" height="72" rx="16" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <!-- Shield (scaled to fit inside 72x72 container with padding) -->
+  <path d="M40,14 L19,23.5 L19,41 C19,53.7 28.5,64.5 40,66.5 C51.5,64.5 61,53.7 61,41 L61,23.5 Z"
+    fill="#0c1420" stroke="#00E5FF" stroke-width="2.2" stroke-linejoin="round"/>
+
+  <!-- Lightning bolt -->
+  <path d="M40,27 L33,38.5 L39,38.5 L35.5,51 L48,34 L42,34 L48,27 Z"
+    fill="#00E5FF"/>
+
+  <!-- Vajra wordmark (mixed case, bold) -->
+  <text
+    x="90" y="51"
+    font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif"
+    font-weight="700"
+    font-size="36"
+    fill="#EDEDED"
+  >Vajra</text>
+</svg>

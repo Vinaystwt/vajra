@@ -47,3 +47,11 @@ POSITIONING.md
 
 # Rust
 **/*.rs.bk
+
+# Internal docs — removed from public repo
+BOUNTY_TRACKS.md
+SUBMISSION_NOTES.md
+STABLECOIN_AGENT_MANDATE.md
+docs/frontend-handoff.md
+app/qa-screenshots/
+pitch-deck-*.html

@@ -32,14 +32,13 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="relative flex items-center justify-center w-8 h-8 rounded-lg bg-cyan/10 border border-cyan/20 group-hover:bg-cyan/15 transition-colors">
-              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
-                <path d="M16 2L4 7v9c0 6.627 5.144 12.053 12 13 6.856-.947 12-6.373 12-13V7L16 2z"
-                  fill="transparent" stroke="#00E5FF" strokeWidth="1.8" strokeLinejoin="round"/>
-                <path d="M16 8.5l-3.5 5.5h3L13.5 21l7-8.5h-3.5L20 8.5H16z"
-                  fill="#00E5FF" opacity="0.95"/>
-                <circle cx="16" cy="14.75" r="1" fill="#0a1520"/>
-              </svg>
+            <div className="relative flex items-center justify-center w-8 h-8 rounded-lg bg-cyan/10 border border-cyan/20 group-hover:bg-cyan/15 transition-colors overflow-hidden">
+              <img
+                src="/logo-mark.svg"
+                alt="Vajra"
+                className="w-6 h-6 object-contain"
+                draggable={false}
+              />
             </div>
             <span className="font-semibold text-[#EDEDED] tracking-tight">Vajra</span>
             <span className="hidden sm:inline text-xs font-mono text-[rgba(237,237,237,0.3)] border border-[rgba(255,255,255,0.08)] px-1.5 py-0.5 rounded">
